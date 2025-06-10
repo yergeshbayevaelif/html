@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+            color:blue;
+        }    
+        .container{
+            font-weight: bold;
+        }
+        #header{
+            color: red;
+        }
+        button{
+            color:darkcyan;
+        }
+        p{
+            color: coral;
+            background-color: aquamarine;
+        }
+        myclass{
+            font-weight: bold;
+            color: lime;
+        }
+        myid{
+            padding: 16px;
+            background-color: slateblue;
+        }
+    </style>
+    <body>
+        <div class="conteiner" id="header">
+            <h1>Welcome to the website</h1>
+        </div>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <select name="password" id="password" required>
+                <option value="">Select a password or write your own</option>
+                <option value="a">asdfghj</option>
+                <option value="123">12345678</option>
+                <option value="own">Write own password</option>
+                <input type="password" name="own" id="own">
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+    <p class="myclass" id="myid">Здесь будут нахдится несколько параграффов</p>
+</html>
