@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>Псевдоклассы</title>
+    </head>
+    <style>
+        button:hover{
+            background-color: #4caf50;
+            color:white;
+        }
+        input:focus{
+            border: 2px solid blue;
+            outline:none;
+        }
+
+        ul li:first-child{
+            color: red;
+            font-weight:bold;
+        }
+        ul li:last-child{
+            color:blue;
+            font-style:italic;
+        }
+
+        a:hover{
+            color:darkorange;
+            text-decoration:underline;
+        }
+        .text-block p:nth-child(odd){
+            background-color: #f0f0f0;
+        }
+
+        .combo-block div:first-child:hover{
+            background-color:#ffe0e0;
+        }
+        .combo-block div:last-child:focus{
+            background-color: #e0ffe0;
+            border: 2px dashed green;
+            outline:none;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+        }
+        .section{
+            margin-bottom: 40px;
+        }
+        input, butto{
+            padding: 8px;
+            margin: 5px;
+        }
+        .text-block, .combo-block{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <body>
+        <div class="section">
+            <h2>Задание 1: hover и focus</h2>
+            <form>
+                <label for="username" class="form_label">username:</label>
+                <input type="username" id="username" class="form_input" placeholder="Enter your username">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Задание 2: first-child и last-child</h2>
+            <ul>
+                <li>First element</li>
+                <li>Middle element</li>
+                <li>Last element</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Задание 3: Приминение к разным элементам</h2>
+            <div class="text-block">
+                <p>First paragraph</p>
+                <p>Second paragraph</p>
+                <p>Third paragraph</p>
+                <a href="https://www.formula1.com/">Link to the f1 oficial web site</a>
+                <p><a hre="https://mobydev.kz/academy">Link to the mobydev platform</a></p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Задание 4: Комбинирование псевдоклассов</h2>
+            <div class="combo-block">
+                <div tabindex="0">Наведи на меня (первый элемент)</div>
+                <div tabindex="0">Средний элемент</div>
+                <div tabindex="0">Фокусируй на меня (последний элемент)</div>
+            </div>
+        </div>
+        <p><strong>Объяснение:</strong></p>
+        <ul>
+            <li><code>:first-child:hover</code>-применяет стиль к первому элементу при наведениее курсора</li>
+            <li><code>:last-child:focus</code>-применяет стиль к последнему элементу, когда он в фоксе (например, по Tab)</li>
+            <li><code>tabindex="0"</code>-ltkftn <code>&lt;div&gt;</code>доступным для фокуса с клавиатуры</li>
+        </ul>
+    </body>
+</html>
